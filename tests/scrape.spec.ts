@@ -1,18 +1,13 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
+import { scraper } from "../src/scraper";
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+const hypothesis = true;
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
+test.describe.configure({ mode: "serial" });
+test.setTimeout(0);
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+test("Scrape data", async ({ page }) => {
+  await scraper(page);
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  expect(hypothesis).toBe(true);
 });
