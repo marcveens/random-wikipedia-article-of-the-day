@@ -2,7 +2,7 @@ name: Playwright Scraper
 on:
   workflow_dispatch:
   schedule:
-    # Runs every day at 9am UTC
+    # Runs every day at 4am UTC
     - cron: '0 4 * * *'
 
 jobs:
