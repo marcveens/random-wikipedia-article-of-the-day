@@ -23,7 +23,7 @@ export default function Home() {
           </a>
           <span>&#8226;</span>
           <a
-            href="https://www.marcveens.nl/posts/scheduled-data-scraping-made-easy-using-playwright-with-github-actions"
+            href="https://www.marcveens.nl/posts/scheduled-web-scraping-made-easy-using-playwright-with-github-actions"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-gray-400 underline hover:text-violet-300"
